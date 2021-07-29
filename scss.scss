@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$left-bg-btn: #53B8BB;
+$right-bg-btn: #F54748;
+$hover-width: 75%;
+$other-width: 25%;
+$transition-speed: 4000ms;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto',
+    sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0; 
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+}
+
+.split.left {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    left: 0;
+    background-color: #F54748;
+    transition: all $transition-speed ease-in-out;
+
+    button {
+        color: $left-bg-btn;
+        font-weight: 700;
+        border-bottom: 4px solid $left-bg-btn;
+    }
+
+    button:hover {
+        background-color: $left-bg-btn;
+        color: white;
+    }
+}
+
+.split.right {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    right: 0;
+    background-color: #53B8BB;
+    transition: all $transition-speed ease-in-out;
+
+    button {
+        color: $right-bg-btn;
+        font-weight: 700;
+        border-bottom: 4px solid $right-bg-btn
+    }
+    
+    button:hover {
+        background-color: $right-bg-btn;
+        border-radius: 5px;
+        color: white;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 18px;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.hover-left .left {
+    width: $hover-width;
+}
+
+.hover-left .right {
+    width: $other-width;
+}
+
+.hover-right .right {
+    width: $hover-width;
+}
+
+.hover-right .left {
+    width: $other-width;
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .split {
+        padding: 0 5%;
+    }
+}

@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+
+.split.left {
+  text-align: center;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  left: 0;
+  background-color: #F54748;
+  -webkit-transition: all 4000ms ease-in-out;
+  transition: all 4000ms ease-in-out;
+}
+.split.left button {
+  color: #53B8BB;
+  font-weight: 700;
+  border-bottom: 4px solid #53B8BB;
+}
+.split.left button:hover {
+  background-color: #53B8BB;
+  color: white;
+}
+
+.split.right {
+  text-align: center;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  right: 0;
+  background-color: #53B8BB;
+  -webkit-transition: all 4000ms ease-in-out;
+  transition: all 4000ms ease-in-out;
+}
+.split.right button {
+  color: #F54748;
+  font-weight: 700;
+  border-bottom: 4px solid #F54748;
+}
+.split.right button:hover {
+  background-color: #F54748;
+  border-radius: 5px;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 18px;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.hover-left .left {
+  width: 75%;
+}
+
+.hover-left .right {
+  width: 25%;
+}
+
+.hover-right .right {
+  width: 75%;
+}
+
+.hover-right .left {
+  width: 25%;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .split {
+    padding: 0 5%;
+  }
+}
